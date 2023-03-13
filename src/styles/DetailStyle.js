@@ -37,12 +37,13 @@ const DetailStyle = StyleSheet.create({
     logoutButton: {
       backgroundColor: Color.blue,
       height: 40,
-      marginLeft: 20,
-      marginRight: 20,
+      width: '90%',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 30,
       borderRadius: 8,
+      alignSelf: 'center',
+      position: 'absolute',
+      bottom: 30,
     },
   })
 

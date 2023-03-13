@@ -12,7 +12,7 @@ const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const onLoginPressHandler = () => {
     if (name === '') {
-      Alert.alert('ExazeSravan Demo', 'Please enter username', [
+      Alert.alert('Exaze Demo', 'Please enter username', [
         { text: 'Okay' },
       ])
     }
@@ -28,10 +28,10 @@ const LoginScreen = ({ navigation }) => {
 
   useEffect(() => {
       if (Platform.OS === 'android') {
-        Alert.alert('Emulator', 'You are using android device');
+        Alert.alert('Exaze Demo', 'You are using android emulator device');
       }
       else {
-        Alert.alert('Simulator', 'You are using iOS device')
+        Alert.alert('Exaze Demo', 'You are using iOS simulator device')
     }
   }, [])
 
