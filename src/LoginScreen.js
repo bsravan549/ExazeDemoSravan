@@ -12,9 +12,7 @@ const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const onLoginPressHandler = () => {
     if (name === '') {
-      Alert.alert('Exaze Demo', 'Please enter username', [
-        { text: 'Okay' },
-      ])
+      Alert.alert('Exaze Demo', 'Please enter username')
     }
     else {
       dispatch(setInputValue(name))

@@ -8,6 +8,7 @@ const DashboardStyle = StyleSheet.create({
       backgroundColor: Color.background
     },
     headerTitle: {
+      marginTop: 50,
       fontSize: Size.title,
       color: Color.white,
       margin: 10,

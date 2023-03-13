@@ -18,8 +18,9 @@ const LoginStyle = StyleSheet.create({
       marginBottom: 10
     },
     textinput: {
-      height: 50,
+      height: 45,
       justifyContent: "center",
+      alignItems: 'center',
       borderWidth: 2,
       borderColor: Color.primary,
       borderRadius: 10,
