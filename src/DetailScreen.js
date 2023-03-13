@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import { Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import DetailStyle from './styles/DetailStyle';
@@ -9,6 +9,7 @@ const DetailScreen = ({ navigation }) => {
   const onPressLogoutHandler = () => {
     navigation.popToTop();
   }
+
   return (
     <SafeAreaView style={DetailStyle.mainview}>
       <Text style={DetailStyle.title}>{StringConstants.helloText} {inputValue}</Text>

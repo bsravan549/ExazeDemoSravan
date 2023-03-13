@@ -1,4 +1,4 @@
-import { Alert, Text, View, TextInput, TouchableOpacity , Platform} from 'react-native'
+import { Alert, Text, View, TextInput, TouchableOpacity, Platform } from 'react-native'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
@@ -25,11 +25,11 @@ const LoginScreen = ({ navigation }) => {
   }
 
   useEffect(() => {
-      if (Platform.OS === 'android') {
-        Alert.alert('Exaze Demo', 'You are using android emulator device');
-      }
-      else {
-        Alert.alert('Exaze Demo', 'You are using iOS simulator device')
+    if (Platform.OS === 'android') {
+      Alert.alert('Exaze Demo', 'You are using android emulator device');
+    }
+    else {
+      Alert.alert('Exaze Demo', 'You are using iOS simulator device')
     }
   }, [])
 
