@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import LoginScreen from './src/LoginScreen';
-import DashboardScreen from './src/DashboardScreen';
-import DetailScreen from './src/DetailScreen';
 import { Provider } from "react-redux";
 import { Store } from "./src/redux/store";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import LoginScreen from './src/screens/Login/LoginScreen';
+import DashboardScreen from './src/screens/Dashboard/DashboardScreen';
+import DetailScreen from './src/screens/Detail/DetailScreen';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} />
         </Stack.Navigator>
-        </NavigationContainer>
+      </NavigationContainer>
     </Provider>
   )
 }

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import Color from '../utils/Color';
-import Size from '../utils/Size';
+import Color from '../../utils/Color';
+import Size from '../../utils/Size';
 
 const DashboardStyle = StyleSheet.create({
   mainview: {
@@ -13,6 +13,31 @@ const DashboardStyle = StyleSheet.create({
     color: Color.white,
     margin: 10,
     textAlign: 'center'
+  },
+  sliderContainer: {
+    backgroundColor: Color.black
+  },
+  sliderContainerStyle: {
+    margin: 2,
+    backgroundColor: Color.black,
+    borderRadius: 8,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '90%',
+    marginLeft: 22,
+    marginTop: 18
+  },
+  sliderElementView: {
+    width: 50,
+    margin: 4,
+    borderRadius: 8,
+    height: 50,
+    backgroundColor: Color.blue
+  },
+  sliderIconStyle: {
+    alignSelf: 'center',
+    marginTop: 8
   },
   buttonsView: {
     bottom: 20,

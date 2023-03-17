@@ -1,8 +1,9 @@
-import { Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import DetailStyle from './styles/DetailStyle';
-import StringConstants from './utils/StringConstants';
+import { StringConstants } from '../../utils/StringConstants';
+import DetailStyle from './DetailStyle';
+import { TouchableButton } from '../../components/TouchableButton/TouchableButton';
 
 const DetailScreen = ({ navigation }) => {
   const { inputValue } = useSelector(state => state.demoReducer);
@@ -15,9 +16,13 @@ const DetailScreen = ({ navigation }) => {
       <Text style={DetailStyle.title}>{StringConstants.helloText} {inputValue}</Text>
       <Text style={DetailStyle.subtitle}>{StringConstants.detailSubTitleText}</Text>
       <Text style={DetailStyle.body}>{StringConstants.detailBodyText}</Text>
-      <TouchableOpacity onPress={onPressLogoutHandler} style={DetailStyle.logoutButton}>
-        <Text style={DetailStyle.logoutButtonText}>{StringConstants.logout}</Text>
-      </TouchableOpacity>
+
+      <TouchableButton
+        onClick={() => onPressLogoutHandler()}
+        buttonStyle={DetailStyle.logoutButton}
+        buttonText={StringConstants.logout}
+        buttonTextStyle={DetailStyle.logoutButtonText}
+      />
     </SafeAreaView>
   )
 }
