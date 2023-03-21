@@ -1,0 +1,16 @@
+[ignore]
+.*\node_modules/.*
+.*\src/redux/.*
+.*\src/redux/store.*
+[include]
+
+[libs]
+/type-def-libs
+
+[lints]
+
+[options]
+all=true
+module.system=node
+module.name_mapper='\(redux\)' -> '\1/src/index'
+[strict]

@@ -18,7 +18,7 @@ const DashboardScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={DashboardStyle.mainview}>
-      <Text style={DashboardStyle.headerTitle}>{DashboardStyle.helloText} {inputValue}</Text>
+      <Text style={DashboardStyle.headerTitle}>{StringConstants.helloText} {inputValue}</Text>
       <View style={DashboardStyle.buttonsView}>
         <Text style={DashboardStyle.buttonViewTitle}>{StringConstants.buttonsViewTitleText}</Text>
 

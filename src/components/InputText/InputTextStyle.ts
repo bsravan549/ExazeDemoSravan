@@ -7,7 +7,7 @@ const InputTextStyle = StyleSheet.create({
     justifyContent: "center",
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: Color.background,
+    borderColor: Color.subtitle,
     borderRadius: 10,
     marginTop: 20,
     marginBottom: 50,
