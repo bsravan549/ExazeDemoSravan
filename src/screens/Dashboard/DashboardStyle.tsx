@@ -1,46 +1,46 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import Color from '../../utils/Color';
 import Size from '../../utils/Size';
 
 const DashboardStyle = StyleSheet.create({
   mainview: {
-    flex: 1,
-    backgroundColor: Color.background
+    flex: Size.one,
+    backgroundColor: Color.background as any,
   },
   headerTitle: {
-    marginTop: 50,
+    marginTop: Size.fifty,
     fontSize: Size.title,
     color: Color.white,
-    margin: 10,
-    textAlign: 'center'
-  },
-  sliderContainer: {
-    backgroundColor: Color.black
+    margin: Size.ten,
+    textAlign: 'center',
   },
   sliderContainerStyle: {
-    margin: 2,
+    margin: Size.two,
+    borderColor: Color.black,
     backgroundColor: Color.black,
-    borderRadius: 8,
+    borderRadius: Size.eight,
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
     width: '90%',
-    marginLeft: 22,
-    marginTop: 18
+    marginLeft: Size.twentyTwo,
+    marginTop: Size.eighteen,
+    height: Size.fifty,
   },
-  sliderElementView: {
-    width: 50,
-    margin: 4,
-    borderRadius: 8,
-    height: 50,
-    backgroundColor: Color.blue
+  sliderStyle: {
+    borderRadius: Size.eight,
+    backgroundColor: Color.transperentColor,
   },
   sliderIconStyle: {
-    alignSelf: 'center',
-    marginTop: 8
+    width: Size.fifty,
+    borderRadius: Size.eight,
+  },
+  sliderTextStyle: {
+    color: Color.blue,
+    fontSize: Size.button_text,
   },
   buttonsView: {
-    bottom: 20,
+    bottom: Size.twenty,
     width: '100%',
     marginBottom: '10%',
     position: 'absolute',
@@ -49,48 +49,48 @@ const DashboardStyle = StyleSheet.create({
   buttonViewTitle: {
     fontSize: Size.button_text,
     color: Color.yellow,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   firstButtonText: {
     fontSize: Size.button_text,
     color: Color.blue,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   firstButton: {
-    elevation: 2,
+    elevation: Size.two,
     borderWidth: 0.2,
-    marginTop: 50,
-    backgroundColor: Color.background,
+    marginTop: Size.fifty,
+    backgroundColor: Color.background as any,
     alignSelf: 'center',
   },
   secondButtonText: {
     fontSize: Size.button_text,
     color: Color.blue,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   secondButton: {
     width: '90%',
-    elevation: 2,
-    borderRadius: 8,
-    marginTop: 20,
-    backgroundColor: Color.buttonBG,
+    elevation: Size.two,
+    borderRadius: Size.eight,
+    marginTop: Size.twenty,
+    backgroundColor: Color.buttonBG as any,
     alignSelf: 'center',
     padding: Size.button_padding,
   },
   thirdButtonText: {
     fontSize: Size.button_text,
     color: Color.white,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   thirdButton: {
     width: '90%',
-    elevation: 2,
-    borderRadius: 8,
-    marginTop: 20,
-    backgroundColor: Color.blue,
+    elevation: Size.two,
+    borderRadius: Size.eight,
+    marginTop: Size.twenty,
+    backgroundColor: Color.blue as any,
     alignSelf: 'center',
     padding: Size.button_padding,
   },
-})
+});
 
 export default DashboardStyle;
