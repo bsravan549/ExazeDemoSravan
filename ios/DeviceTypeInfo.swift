@@ -14,13 +14,12 @@ class DeviceTypeInfo: NSObject {
   @objc
   func userDeviceType(_ callback:RCTResponseSenderBlock) {
     var deviceType: String
-       #if targetEnvironment(simulator)
-         deviceType = "Simulator"
-       #else
-         deviceType = UIDevice.current.name
-       #endif
+#if targetEnvironment(simulator)
+    deviceType = "Simulator"
+#else
+    deviceType = UIDevice.current.name
+#endif
     callback([deviceType])
-    print("Device::: \(deviceType)")
   }
   
   @objc

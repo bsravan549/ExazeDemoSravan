@@ -18,6 +18,7 @@ type LoginProps = {
 
 const LoginScreen = ({navigation}: LoginProps) => {
   const [name, setName] = useState('');
+  const {EmulatorChecker} = NativeModules;
   const value = (value: React.SetStateAction<string>) => {
     setName(value);
   };
@@ -37,7 +38,6 @@ const LoginScreen = ({navigation}: LoginProps) => {
         Alert.alert('Exaze Demo', `You are using iOS ${value}`);
       });
     } else {
-      const {EmulatorChecker} = NativeModules;
       EmulatorChecker.isEmulator((result: string) => {
         if (result === 'emulator') {
           Alert.alert('Exaze Demo', `You are using android ${result}`);
