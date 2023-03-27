@@ -7,13 +7,7 @@ import LoginScreen from './src/screens/Login/LoginScreen';
 import DashboardScreen from './src/screens/Dashboard/DashboardScreen';
 import DetailScreen from './src/screens/Detail/DetailScreen';
 
-type RootStackParamList = {
-  LoginScreen: {};
-  DashboardScreen: {};
-  DetailScreen: {};
-};
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
