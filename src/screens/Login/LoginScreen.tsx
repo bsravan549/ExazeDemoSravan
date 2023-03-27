@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import {Alert, Text, View} from 'react-native';
+import {Alert, Platform, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import DeviceInfo from 'react-native-device-info';
 import LoginStyle from './LoginStyle';
 import {StringConstants} from '../../utils/StringConstants';
 import {TouchableButton} from '../../components/TouchableButton/TouchableButton';
 import {setInputValue} from '../../redux/actions';
 import {InputText} from '../../components/InputText/InputText';
+import {NativeModules} from 'react-native';
 
 type LoginProps = {
   navigation: any;
@@ -32,8 +32,20 @@ const LoginScreen = ({navigation}: LoginProps) => {
   };
 
   useEffect(() => {
-    let deviceModel = DeviceInfo.getModel();
-    Alert.alert('Exaze Demo', `You are using ${deviceModel} device`);
+    if (Platform.OS === 'ios') {
+      NativeModules.DeviceTypeInfo.userDeviceType((value: string) => {
+        Alert.alert('Exaze Demo', `You are using iOS ${value}`);
+      });
+    } else {
+      const {EmulatorChecker} = NativeModules;
+      EmulatorChecker.isEmulator((result: string) => {
+        if (result === 'emulator') {
+          Alert.alert('Exaze Demo', `You are using android ${result}`);
+        } else {
+          Alert.alert('Exaze Demo', `You are using ${result}`);
+        }
+      });
+    }
   }, []);
 
   return (

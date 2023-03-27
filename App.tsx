@@ -1,4 +1,3 @@
-import {StyleSheet} from 'react-native';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from './src/redux/store';
@@ -9,6 +8,7 @@ import DashboardScreen from './src/screens/Dashboard/DashboardScreen';
 import DetailScreen from './src/screens/Detail/DetailScreen';
 
 const Stack = createNativeStackNavigator();
+
 const App = () => {
   return (
     <Provider store={Store}>
@@ -24,5 +24,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
