@@ -39,7 +39,7 @@ public class EmulatorChecker extends ReactContextBaseJavaModule {
                 || Build.PRODUCT.contains("vbox86p")
                 || Build.PRODUCT.contains("emulator")
                 || Build.PRODUCT.contains("simulator")) {
-            result = "emulator";
+            result = "android emulator";
         } else {
             result = deviceMan + " " + deviceModel;
         }

@@ -10,9 +10,11 @@ import {TouchableButton} from '../../components/TouchableButton/TouchableButton'
 import {setInputValue} from '../../redux/actions';
 import {InputText} from '../../components/InputText/InputText';
 import {NativeModules} from 'react-native';
+import {ParamListBase} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 type LoginProps = {
-  navigation: any;
+  navigation: NativeStackNavigationProp<ParamListBase, 'LoginScreen'>;
   name: string;
 };
 
@@ -25,7 +27,7 @@ const LoginScreen = ({navigation}: LoginProps) => {
   const dispatch = useDispatch();
   const onLoginPressHandler = () => {
     if (name === '') {
-      Alert.alert('Exaze Demo', 'Please enter username');
+      Alert.alert(StringConstants.alertTitle, StringConstants.emptyName);
     } else {
       dispatch(setInputValue(name));
       navigation.navigate(StringConstants.dashBoardScreen);
@@ -33,20 +35,29 @@ const LoginScreen = ({navigation}: LoginProps) => {
   };
 
   useEffect(() => {
-    if (Platform.OS === 'ios') {
-      NativeModules.DeviceTypeInfo.userDeviceType((value: string) => {
-        Alert.alert('Exaze Demo', `You are using iOS ${value}`);
+    if (Platform.OS === StringConstants.osTypeiOS) {
+      NativeModules.DeviceTypeInfo.userDeviceType((result: string) => {
+        Alert.alert(
+          StringConstants.alertTitle,
+          `${StringConstants.platformAlert} ${result}`,
+        );
       });
     } else {
       EmulatorChecker.isEmulator((result: string) => {
-        if (result === 'emulator') {
-          Alert.alert('Exaze Demo', `You are using android ${result}`);
+        if (result === StringConstants.emulator) {
+          Alert.alert(
+            StringConstants.alertTitle,
+            `${StringConstants.platformAlert} ${result}`,
+          );
         } else {
-          Alert.alert('Exaze Demo', `You are using ${result}`);
+          Alert.alert(
+            StringConstants.alertTitle,
+            `${StringConstants.platformAlert} ${result}`,
+          );
         }
       });
     }
-  }, []);
+  }, [EmulatorChecker]);
 
   return (
     <SafeAreaView style={LoginStyle.mainview}>

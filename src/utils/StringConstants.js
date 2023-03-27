@@ -1,8 +1,13 @@
 export const StringConstants = {
+  osTypeiOS: 'ios',
+  platformAlert: 'You are using',
+  emulator: 'emulator',
+  alertTitle: 'Exaze Demo',
   diamondIcon: 'diamond',
   logout: 'Logout',
   helloText: 'Hello:',
   login_welcome: 'Welcome back!',
+  emptyName: 'Please enter username',
   login_sub_title: 'Sign in to your account',
   login_textField_placeholder: 'Enter your username',
   login_nextButton: 'Next',

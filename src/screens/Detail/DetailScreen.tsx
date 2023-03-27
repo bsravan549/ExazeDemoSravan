@@ -5,9 +5,11 @@ import {StringConstants} from '../../utils/StringConstants';
 import DetailStyle from './DetailStyle';
 import {TouchableButton} from '../../components/TouchableButton/TouchableButton';
 import {RootState} from '../../redux/store';
+import {ParamListBase} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 type DetailProps = {
-  navigation: any;
+  navigation: NativeStackNavigationProp<ParamListBase, 'DetailScreen'>;
 };
 
 const DetailScreen = ({navigation}: DetailProps) => {

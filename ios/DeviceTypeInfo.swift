@@ -15,7 +15,7 @@ class DeviceTypeInfo: NSObject {
   func userDeviceType(_ callback:RCTResponseSenderBlock) {
     var deviceType: String
 #if targetEnvironment(simulator)
-    deviceType = "Simulator"
+    deviceType = "iOS Simulator"
 #else
     deviceType = UIDevice.current.name
 #endif

@@ -7,9 +7,11 @@ import {TouchableButton} from '../../components/TouchableButton/TouchableButton'
 import {StringConstants} from '../../utils/StringConstants';
 import {RootState} from '../../redux/store';
 import SwipeButton from 'rn-swipe-button';
+import {ParamListBase} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 type DashBoardProps = {
-  navigation: any;
+  navigation: NativeStackNavigationProp<ParamListBase, 'DashboardScreen'>;
 };
 
 const DashboardScreen = ({navigation}: DashBoardProps) => {
