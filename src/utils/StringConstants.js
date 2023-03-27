@@ -1,7 +1,7 @@
 export const StringConstants = {
   osTypeiOS: 'ios',
   platformAlert: 'You are using',
-  emulator: 'emulator',
+  emulator: 'android emulator',
   alertTitle: 'Exaze Demo',
   diamondIcon: 'diamond',
   logout: 'Logout',
