@@ -44,17 +44,10 @@ const LoginScreen = ({navigation}: LoginProps) => {
       });
     } else {
       EmulatorChecker.isEmulator((result: string) => {
-        if (result === StringConstants.emulator) {
-          Alert.alert(
-            StringConstants.alertTitle,
-            `${StringConstants.platformAlert} ${result}`,
-          );
-        } else {
-          Alert.alert(
-            StringConstants.alertTitle,
-            `${StringConstants.platformAlert} ${result}`,
-          );
-        }
+        Alert.alert(
+          StringConstants.alertTitle,
+          `${StringConstants.platformAlert} ${result}`,
+        );
       });
     }
   }, [EmulatorChecker]);
